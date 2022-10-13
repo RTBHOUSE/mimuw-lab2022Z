@@ -360,24 +360,24 @@ sudo docker service create --name appserver -p 8000:8000 -d <username>vm101.rtb-
 3. Check if the service works:
 
 ```bash
-curl <username>vm101.rtb-lab.pl 8000
+curl <username>vm101.rtb-lab.pl:8000
 ```
 
 It should reply with the IP address of the container.
 
-3. Scale the service to 10 replicas:
+4. Scale the service to 10 replicas:
 
 ```bash
 sudo docker service scale appserver=10
 ```
 
-4. Verify that the swarm manager uses ingress load balancing on the service (the address of server is changing on every request):
+5. Verify that the swarm manager uses ingress load balancing on the service (the address of server is changing on every request):
 
 ```bash
-for i in `seq 1 10`; do curl <username>vm101.rtb-lab.pl 8000; done
+for i in `seq 1 10`; do curl <username>vm101.rtb-lab.pl:8000; done
 ```
 
-5. Remove the service:
+6. Remove the service:
 
 ```bash
 sudo docker service rm appserver
