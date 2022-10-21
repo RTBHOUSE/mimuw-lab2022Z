@@ -63,6 +63,13 @@ cd mimuw-lab2022Z/lab03/aerospike
 ansible-playbook --extra-vars "ansible_user=<user> ansible_password=<password> ansible_ssh_extra_args='-o StrictHostKeyChecking=no'" -i hosts aerospike.yaml
 ```
 
+In case of problems with the playbook, upgrade to the latest version of Ansible:
+```bash
+sudo add-apt-repository ppa:ansible/ansible
+sudo apt update
+sudo apt upgrade ansible
+```
+
 6. Check that the cluster contains two nodes:
 ```bash
 asadm
