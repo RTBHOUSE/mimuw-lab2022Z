@@ -50,7 +50,7 @@ public class ProducerApp {
             }));
 
             fixedThreadPool.shutdown();
-            fixedThreadPool.awaitTermination(100, TimeUnit.SECONDS);
+            fixedThreadPool.awaitTermination(300, TimeUnit.SECONDS);
         }
     }
 }
