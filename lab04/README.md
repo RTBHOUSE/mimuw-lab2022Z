@@ -432,7 +432,7 @@ $ /opt/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list loc
 
 6. Check the size of the kafka-logs directories for `my_third_topic` partitions:
 ```bash
-$ du -h /opt/kafka/kafka-logs/my_third_topic-*
+$ du -hc /opt/kafka/kafka-logs/my_third_topic-*
 ```
 
 7. Delete the topic:
@@ -447,9 +447,9 @@ Now introduce producer-side compression in the `kafka-producer` application and 
 <br>
 
 1. Edit the parameters in `com/rtbhouse/producer/ProducerApp.java`, add `ProducerConfig.COMPRESSION_TYPE_CONFIG` and `ProducerConfig.LINGER_MS_CONFIG` (with value equal to '5')
-2. Valid compression types are `gzip`, `lz4`, `snappy`, and `zstd`.
+2. Valid compression types are `gzip`, `lz4`, `snappy`, and `zstd`. Focus on `snappy` and `zstd`.
 3. Remember to rebuild the `kafka-producer` application after each change.
-4. Recreate the `my_third_topic` before every new run of the application.
+4. Recreate the `my_third_topic` before every new run of the application (delete & create).
 </details>
 
 ## 11. Ensuring high availability (optional)
