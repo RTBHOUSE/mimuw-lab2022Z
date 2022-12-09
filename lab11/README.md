@@ -101,4 +101,5 @@ Query the "latest_weather_forecast" view to get the latest weather forecastfor W
 SELECT * from weather.latest_weather_forecast WHERE DATE(datetime)="2022-06-09"
 ```
 
-## 10. Weather forecast for many locations Imagine you would like to gather the weather forecast for many locations* How would you change the schema of the table?* How can we limit the money charged when querying temperatures for a given location?
+## 10. Weather forecast for many locations 
+Imagine you would like to gather the weather forecast for many locations* How would you change the schema of the table?* How can we limit the money charged when querying temperatures for a given location?
