@@ -19,6 +19,7 @@ Create a new job in Cloud Scheduler called "weather_download_trigger_job" that w
 
 ## 4. Create BigQuery table
 Create in BigQuery a new dataset "weather" and in this dataset a new table "weather_forecast" with the following columns:
+
 | name | type | NULLABLE? |
 | ---  | ---  | --- |
 | datetime | DATETIME | NULLABLE |
