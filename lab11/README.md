@@ -22,12 +22,11 @@ Create in BigQuery a new dataset "weather" and in this dataset a new table "weat
 
 
 | name | type | NULLABLE? |
-| ---  | ---  | --- |
+| -----  | ---  | --- |
 | datetime | DATETIME | NULLABLE |
 | weather | STRING | NULLABLE |
 | temp | INTEGER | NULLABLE |
 | timestamp | TIMESTAMP | NULLABLE |
-
 
 ## 5. Create function
 Create a new function in Cloud Function that will be triggered by the Pub/Sub topic "weather_update_trigger_topic". 
