@@ -20,13 +20,12 @@ Create a new job in Cloud Scheduler called "weather_download_trigger_job" that w
 ## 4. Create BigQuery table
 Create in BigQuery a new dataset "weather" and in this dataset a new table "weather_forecast" with the following columns:
 
-
 | name | type | NULLABLE? |
-| -----  | ---  | --- |
+| --- | --- | --- |
 | datetime | DATETIME | NULLABLE |
 | weather | STRING | NULLABLE |
 | temp | INTEGER | NULLABLE |
-| timestamp | TIMESTAMP | NULLABLE |
+| timestamp | TIMESTAMP | NULLABLE |
 
 ## 5. Create function
 Create a new function in Cloud Function that will be triggered by the Pub/Sub topic "weather_update_trigger_topic". 
